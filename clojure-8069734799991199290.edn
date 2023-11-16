@@ -1,0 +1,105 @@
+{:clojure.main/message
+ "Execution error (UnsatisfiedLinkError) at com.sun.jna.Native/open (Native.java:-2).\n/lib64/libc.so.6: version `GLIBC_2.33' not found (required by /home/dan/.cache/JNA/temp/jna16687751045568195164.tmp)\n",
+ :clojure.main/triage
+ {:clojure.error/class java.lang.UnsatisfiedLinkError,
+  :clojure.error/line -2,
+  :clojure.error/cause
+  "/lib64/libc.so.6: version `GLIBC_2.33' not found (required by /home/dan/.cache/JNA/temp/jna16687751045568195164.tmp)",
+  :clojure.error/symbol com.sun.jna.Native/open,
+  :clojure.error/source "Native.java",
+  :clojure.error/phase :execution},
+ :clojure.main/trace
+ {:via
+  [{:type clojure.lang.Compiler$CompilerException,
+    :message "Syntax error macroexpanding at (raw.clj:43:3).",
+    :data
+    {:clojure.error/phase :execution,
+     :clojure.error/line 43,
+     :clojure.error/column 3,
+     :clojure.error/source "raw.clj"},
+    :at
+    [clojure.lang.Compiler$StaticMethodExpr eval "Compiler.java" 1733]}
+   {:type java.lang.UnsatisfiedLinkError,
+    :message
+    "/lib64/libc.so.6: version `GLIBC_2.33' not found (required by /home/dan/.cache/JNA/temp/jna16687751045568195164.tmp)",
+    :at [com.sun.jna.Native open "Native.java" -2]}],
+  :trace
+  [[com.sun.jna.Native open "Native.java" -2]
+   [com.sun.jna.NativeLibrary loadLibrary "NativeLibrary.java" 298]
+   [com.sun.jna.NativeLibrary getInstance "NativeLibrary.java" 483]
+   [jdk.internal.reflect.NativeMethodAccessorImpl
+    invoke0
+    "NativeMethodAccessorImpl.java"
+    -2]
+   [jdk.internal.reflect.NativeMethodAccessorImpl
+    invoke
+    "NativeMethodAccessorImpl.java"
+    77]
+   [jdk.internal.reflect.DelegatingMethodAccessorImpl
+    invoke
+    "DelegatingMethodAccessorImpl.java"
+    43]
+   [java.lang.reflect.Method invoke "Method.java" 568]
+   [clojure.lang.Reflector invokeMatchingMethod "Reflector.java" 167]
+   [clojure.lang.Compiler$StaticMethodExpr eval "Compiler.java" 1726]
+   [clojure.lang.Compiler$DefExpr eval "Compiler.java" 454]
+   [clojure.lang.Compiler eval "Compiler.java" 7182]
+   [clojure.lang.Compiler load "Compiler.java" 7636]
+   [clojure.lang.RT loadResourceScript "RT.java" 381]
+   [clojure.lang.RT loadResourceScript "RT.java" 372]
+   [clojure.lang.RT load "RT.java" 459]
+   [clojure.lang.RT load "RT.java" 424]
+   [clojure.core$load$fn__6926 invoke "core.clj" 6167]
+   [clojure.core$load invokeStatic "core.clj" 6166]
+   [clojure.core$load doInvoke "core.clj" 6150]
+   [clojure.lang.RestFn invoke "RestFn.java" 411]
+   [clojure.core$load_one invokeStatic "core.clj" 5939]
+   [clojure.core$load_one invoke "core.clj" 5934]
+   [clojure.core$load_lib$fn__6868 invoke "core.clj" 5981]
+   [clojure.core$load_lib invokeStatic "core.clj" 5980]
+   [clojure.core$load_lib doInvoke "core.clj" 5959]
+   [clojure.lang.RestFn applyTo "RestFn.java" 145]
+   [clojure.core$apply invokeStatic "core.clj" 669]
+   [clojure.core$load_libs invokeStatic "core.clj" 6022]
+   [clojure.core$load_libs doInvoke "core.clj" 6006]
+   [clojure.lang.RestFn applyTo "RestFn.java" 140]
+   [clojure.core$apply invokeStatic "core.clj" 669]
+   [clojure.core$require invokeStatic "core.clj" 6044]
+   [clojure.core$require doInvoke "core.clj" 6044]
+   [clojure.lang.RestFn applyTo "RestFn.java" 140]
+   [clojure.core$apply invokeStatic "core.clj" 667]
+   [clojure.core$serialized_require invokeStatic "core.clj" 6120]
+   [clojure.core$requiring_resolve invokeStatic "core.clj" 6129]
+   [clojure.core$requiring_resolve invoke "core.clj" 6123]
+   [com.phronemophobic.llama$fn__395 invokeStatic "llama.clj" 49]
+   [com.phronemophobic.llama$fn__395 invoke "llama.clj" 48]
+   [clojure.lang.Delay deref "Delay.java" 42]
+   [clojure.core$deref invokeStatic "core.clj" 2337]
+   [clojure.core$deref invoke "core.clj" 2323]
+   [com.phronemophobic.llama$create_context
+    invokeStatic
+    "llama.clj"
+    119]
+   [com.phronemophobic.llama$create_context invoke "llama.clj" 54]
+   [com.phronemophobic.llama$create_context
+    invokeStatic
+    "llama.clj"
+    89]
+   [com.phronemophobic.llama$create_context invoke "llama.clj" 54]
+   [com.phronemophobic.llama$_main invokeStatic "llama.clj" 317]
+   [com.phronemophobic.llama$_main invoke "llama.clj" 316]
+   [clojure.lang.AFn applyToHelper "AFn.java" 156]
+   [clojure.lang.AFn applyTo "AFn.java" 144]
+   [clojure.lang.Var applyTo "Var.java" 707]
+   [clojure.core$apply invokeStatic "core.clj" 667]
+   [clojure.main$main_opt invokeStatic "main.clj" 515]
+   [clojure.main$main_opt invoke "main.clj" 511]
+   [clojure.main$main invokeStatic "main.clj" 665]
+   [clojure.main$main doInvoke "main.clj" 617]
+   [clojure.lang.RestFn applyTo "RestFn.java" 140]
+   [clojure.lang.Var applyTo "Var.java" 707]
+   [clojure.main main "main.java" 40]],
+  :cause
+  "/lib64/libc.so.6: version `GLIBC_2.33' not found (required by /home/dan/.cache/JNA/temp/jna16687751045568195164.tmp)",
+  :phase :execution}}
+
